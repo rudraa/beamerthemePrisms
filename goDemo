@@ -1,0 +1,10 @@
+#!/bin/bash
+
+file=demo
+
+# TeX up the document
+latex ${file} && dvips -Ppdf -G0 -o ${file}.ps ${file}.dvi && ps2pdf ${file}.ps
+
+# View the output
+acroread ${file}.pdf &
+
