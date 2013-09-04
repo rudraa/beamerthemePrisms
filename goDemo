@@ -6,5 +6,5 @@ file=demo
 latex ${file} && dvips -Ppdf -G0 -o ${file}.ps ${file}.dvi && ps2pdf ${file}.ps
 
 # View the output
-acroread ${file}.pdf &
+evince ${file}.pdf &
 
